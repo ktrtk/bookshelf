@@ -1,0 +1,6 @@
+# -*- ruby -*-
+
+#require 'autotest/redgreen'
+require 'win32/console/ansi'
+require 'autotest/growl'
+require 'autotest/fsevent'
