@@ -1,6 +1,8 @@
 Bookshelf::Application.routes.draw do
+  match 'items/get_amazon_info' => 'items#get_amazon_info'
   resources :items
 
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

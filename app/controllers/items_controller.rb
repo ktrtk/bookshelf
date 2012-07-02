@@ -80,4 +80,9 @@ class ItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def get_amazon_info
+    @value = "test"
+  end
+
 end
