@@ -11,7 +11,7 @@ class EcsWrapper
   attr_reader :title, :author
 
   def lookup(asin)
-    res = Amazon.Ecs.item_lookup(asin)
+    res = Amazon::Ecs.item_lookup(asin)
     item = res.first_item
     @title = item.get('ItemAttributes/Title')
     @author = item.get('ItemAttributes/Author')
