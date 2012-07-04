@@ -1,3 +1,11 @@
+<%= form_tag({:action=>'get_amazon_info'}, {:remote=>true}) do %>
+  <div class="field">
+	<label><%= :asin %></label>
+	<%= text_field_tag :asin, '', {:size=>25} %>
+    <%= submit_tag 'Amazon' %>
+  </div>
+<% end %>
+
 <%= form_for(@item) do |f| %>
   <% if @item.errors.any? %>
     <div id="error_explanation">
@@ -22,7 +30,6 @@
   <div class="field">
     <%= f.label :asin %><br />
     <%= f.text_field :asin %>
-	<%= link_to "Amazon", {:action=>'get_amazon_info'}, :remote=>true %>
   </div>
   <div class="actions">
     <%= f.submit %>

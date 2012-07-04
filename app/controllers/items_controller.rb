@@ -1,3 +1,5 @@
+require 'amazon_ecs.rb'
+
 class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
@@ -82,7 +84,11 @@ class ItemsController < ApplicationController
   end
 
   def get_amazon_info
-    @value = "test"
+    @asin = params[:asin]
+    info = EcsWrapper.new
+    info.lookup(@asin)
+    @title = info.title
+    @author = info.author
   end
 
 end
